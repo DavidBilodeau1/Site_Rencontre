@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href= "css/Formulaire.css" />
+<link rel="stylesheet" type="text/css" href= "css/style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<title>Inscription</title>
+</head>
+<body>
+<a href="index.html" id="tayeule">Home</a>
+<h1>Inscription</h1>
+<form action="Inscription.php" method="post" onsubmit="return verifForm(this);">
+	<fieldset>
+		<legend>Informations personelles</legend>
+		<div>
+		Nom <br><input type="text" name="name"  autofocus onblur="verifNom(this)"/><br><br>
+		Prénom <br><input type="text" name="name2"  onblur="verifPrenom(this)"/><br><br>
+		Âge <br><input type="number" name="age" step="" value="18" min="18" max="26"/><br><br>
+		Email <br><input type="text" name="adresse" placeholder="Example@hotmail.com" size="30" onblur="verifMail(this)"/><br><br>
+		<input class="Sexe" type="radio" name="gender" value="male" checked="true"> Homme</input><br><br>
+		<input class="Sexe" type="radio" name="gender" value="female"> Femme</input><br><br>
+		Nom d'utilisateur <br><input type="text" name="username"  maxlength="25" onblur="verifUsername(this)"/><br><br>
+		Mot de Passe <br> <input type="password" name="password" maxlength="25" onblur="verifPassword(this)"></input>
+		Confirmer le Mot de Passe <br> <input type="password" name="password" maxlength="25" onblur="confirmation(this)"></input><br><br>
+		
+		Description <br><textarea rows="4" name="texte" onblur="verifTexte(this)" maxlength="100"></textarea><br><br>
+		</div>
+
+		<aside>
+		<br><br>
+		<h1>Veuillez Choisir un Intérêt</h1>
+		<select name="interet" onsubmit="verifInteret(this)">
+		<optgroup label="Intérêt">
+		<option value=""></option>
+		<option value="Sports">Sports</option>
+		<option value="Books">Books</option>
+		<option value="VideoGames">VideoGames</option>
+		<option value="Food">Food</option>
+		<option value="Art">Art</option>
+		<option value="Movies">Movies</option>
+		</optgroup>
+		</select>
+		</aside>
+</form>			
+		<center>
+		<input type="submit" value="Envoyer">
+		</center>
+	</fieldset>
+<script src="script.js"> </script>
+</body>
+</html>

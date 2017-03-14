@@ -1,0 +1,14 @@
+
+-Nom 
+-Prenom
+-Age
+-Sexe
+-Email
+-Mot de passe
+-Description ( +/- 70 mots)
+-Interet
+
+
+
+Div 	Inline Block 
+	Vertical Align
